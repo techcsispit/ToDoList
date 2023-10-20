@@ -1,4 +1,4 @@
-# **Readme: Simple Todo List Application**
+# **Simple Todo List Application**
 
 This is a simple web-based Todo List application built using HTML, CSS, and JavaScript. It allows users to add, toggle, and delete tasks in a user-friendly interface.
 
