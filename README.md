@@ -50,6 +50,8 @@ This is a simple project, but you're welcome to contribute to it by improving th
 
 - This project was created as a simple example by a developer (you can include your name or GitHub username here).
 
+-Oreniscool for dark mode.
+
 - The 'Poppins' font used in the project is provided by Google Fonts.
 
 Thank you for using and contributing to this Todo List application!

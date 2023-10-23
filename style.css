@@ -53,6 +53,7 @@ form {
   padding: 0;
   margin: 0;
   list-style-type: none;
+  transition: background 0.2s linear;
 }
 
 .todos li {
