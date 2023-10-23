@@ -4,6 +4,7 @@ const todosUL = document.getElementById('todos')
 
 const todos = JSON.parse(localStorage.getItem('todos'))
 
+
 if(todos) {
     todos.forEach(todo => addTodo(todo))
 }
@@ -62,4 +63,21 @@ function updateLS() {
     })
 
     localStorage.setItem('todos', JSON.stringify(todos))
+}
+
+//Dark light mode toggle
+function lightDarkToggle() {
+    let lightOrDark = document.querySelector(".lightOrDark");
+    let element = document.body;
+    let inputBox = document.querySelector(".input");
+    let todos = document.querySelector(".todos")
+
+    todos.classList.toggle("dark");
+    inputBox.classList.toggle("dark");
+    element.classList.toggle("dark");
+    if (lightOrDark.textContent === "☀︎") {
+        lightOrDark.textContent = "☾";
+      } else {
+        lightOrDark.textContent = "☀︎";
+      }
 }
