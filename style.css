@@ -45,6 +45,7 @@ form {
 }
 
 .input:focus {
+  outline-style: solid;
   outline-color: rgb(179, 131, 226);
 }
 
