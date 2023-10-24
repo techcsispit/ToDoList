@@ -30,6 +30,14 @@ form {
   width: 400px;
 }
 
+.quote{
+  color: #656565;
+  font-size: 1rem;
+  text-align: center;
+  opacity: 0.4;
+  margin: 1.5em 0em;
+}
+
 .input {
   border: none;
   color: #444;
