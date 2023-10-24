@@ -72,8 +72,8 @@ function lightDarkToggle() {
     let inputBox = document.querySelector(".input");
     let todos = document.querySelector(".todos")
 
-    todos.classList.toggle("dark");
-    inputBox.classList.toggle("dark");
+    todos.classList.toggle("dark-todos");
+    inputBox.classList.toggle("dark-todos");
     element.classList.toggle("dark");
     if (lightOrDark.textContent === "☀︎") {
         lightOrDark.textContent = "☾";
