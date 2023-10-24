@@ -7,12 +7,15 @@
     <title>Todo List</title>
   </head>
   <body>
-    <div class="light-or-dark" onclick="lightDarkToggle()">☀︎</div>
-    <h1>todos</h1>
+    <div class="lightOrDark" onclick="lightDarkToggle()">☀︎</div>
+    <h3>todos</h3>
+    <div class="quotes-container" id="quotes-container">
+      <p class="quote" id="quote">
+      </p>
+    </div>  
     <form id="form">
       <input type="text" class="input" id="input" placeholder="Enter your todo" autocomplete="off">
-
-      <ul class="todos" id="todos"></ul>
+        <ul class="todos" id="todos"></ul>
     </form>
     <small>Left click to toggle completed. <br> Right click to delete todo</small>
 
