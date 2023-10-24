@@ -67,10 +67,10 @@ function updateLS() {
 
 //Dark light mode toggle
 function lightDarkToggle() {
-    let lightOrDark = document.querySelector(".lightOrDark");
+    let lightOrDark = document.querySelector(".light-or-dark");
     let element = document.body;
     let inputBox = document.querySelector(".input");
-    let todos = document.querySelector(".todos")
+    let todos = document.querySelector(".todos");
 
     todos.classList.toggle("dark-todos");
     inputBox.classList.toggle("dark-todos");

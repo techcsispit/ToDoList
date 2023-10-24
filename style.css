@@ -15,6 +15,7 @@ body {
   height: 100vh;
   margin: 0;
   transition: background 0.2s linear;
+  justify-content: space-around;
 }
 
 h1 {
@@ -49,6 +50,7 @@ form {
 .input:focus {
   outline-style: solid;
   outline-color: rgb(179, 131, 226);
+  box-shadow: inset 0 0 0 1px rgb(179, 131, 226);
 }
 
 .todos {
@@ -79,7 +81,7 @@ small {
 }
 
 /*Dark mode toggle*/
-.lightOrDark {
+.light-or-dark {
   position: fixed;
   top:20px;
   transform: rotate(-0.1turn);
@@ -91,7 +93,7 @@ small {
   user-select: none;
 }
 
-.lightOrDark:hover {
+.light-or-dark:hover {
   cursor: pointer;
 }
 
