@@ -70,10 +70,13 @@ function lightDarkToggle() {
     let lightOrDark = document.querySelector(".lightOrDark");
     let element = document.body;
     let inputBox = document.querySelector(".input");
-    let todos = document.querySelector(".todos")
-
-    todos.classList.toggle("dark");
-    inputBox.classList.toggle("dark");
+    try {
+        let todos = document.querySelector(".todos li");
+        todos.classList.toggle("dark-todos");
+    }
+    catch(err) {
+    }
+    inputBox.classList.toggle("dark-input");
     element.classList.toggle("dark");
     if (lightOrDark.textContent === "☀︎") {
         lightOrDark.textContent = "☾";
@@ -82,7 +85,7 @@ function lightDarkToggle() {
       }
 }
 
-// Qoute Generator
+// Quote Generator
 const quotesContainer = document.getElementById('quotes-container');
 const quoteElement = document.getElementById('quote');
 
