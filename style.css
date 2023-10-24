@@ -38,6 +38,7 @@ form {
   display: block;
   width: 100%;
   transition: background 0.2s linear;
+  text-align: center;
 }
 
 .input::placeholder {
@@ -55,6 +56,7 @@ form {
   margin: 0;
   list-style-type: none;
   transition: background 0.2s linear;
+  word-wrap:break-word;
 }
 
 .todos li {
@@ -79,9 +81,13 @@ small {
 .lightOrDark {
   position: fixed;
   top:20px;
+  transform: rotate(-0.1turn);
   right: 20px;
   font-size: 30px;
   transition: transform 0.2s linear;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
 }
 
 .lightOrDark:hover {
