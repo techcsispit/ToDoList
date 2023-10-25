@@ -104,6 +104,19 @@ small {
   text-align: center;
 }
 
+/*calendar*/
+.calendar{
+  position: fixed;
+  top:23px;
+  right: 65px;
+  font-size: 30px;
+}
+
+#cal{
+  height: 25px;
+  width: 27px;
+}
+
 /*Dark mode toggle*/
 .lightOrDark {
   position: fixed;
