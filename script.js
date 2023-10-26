@@ -66,15 +66,24 @@ function updateLS() {
 }
 
 //Dark light mode toggle
+let calIcon = document.querySelector("#cal");
+let imgSrc= calIcon.src;
 function lightDarkToggle() {
     let lightOrDark = document.querySelector(".lightOrDark");
     let element = document.body;
     let inputBox = document.querySelector(".input");
+
     try {
         let todos = document.querySelector(".todos li");
         todos.classList.toggle("dark-todos");
     }
     catch(err) {
+    }
+    if (calIcon.src == imgSrc) {
+        calIcon.src= "public/images/calendar-dark.png";
+    }
+    else {
+        calIcon.src="public/images/calendar.png";
     }
     inputBox.classList.toggle("dark-input");
     element.classList.toggle("dark");
