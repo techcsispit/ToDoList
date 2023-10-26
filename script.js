@@ -1,7 +1,6 @@
 const form = document.getElementById('form')
 const input = document.getElementById('input')
 const todosUL = document.getElementById('todos')
-
 const todos = JSON.parse(localStorage.getItem('todos'))
 
 
@@ -68,10 +67,22 @@ function updateLS() {
 //Dark light mode toggle
 let calIcon = document.querySelector("#cal");
 let imgSrc= calIcon.src;
-function lightDarkToggle() {
+if(localStorage.getItem('preference')=='dark') {
+    lightDarkToggle(1);
+}
+function lightDarkToggle(flag) {
     let lightOrDark = document.querySelector(".lightOrDark");
     let element = document.body;
     let inputBox = document.querySelector(".input");
+    if(flag==0) {
+        if(localStorage.getItem('preference')=='dark') {
+            localStorage.setItem('preference', 'light');
+            alert(localStorage.getItem('preference'));
+        }
+        else {
+            localStorage.setItem('preference', 'dark')
+        }
+    }
 
     try {
         let todos = document.querySelector(".todos li");
