@@ -85,33 +85,21 @@ function lightDarkToggle() {
       }
 }
 
-// Quote Generator
 const quotesContainer = document.getElementById('quotes-container');
 const quoteElement = document.getElementById('quote');
 
-const productivityQuotes = [
-  { quote: "The key is not to prioritize what's on your schedule, but to schedule your priorities.", author: "Stephen Covey" },
-  { quote: "Productivity is never an accident. It is always the result of a commitment to excellence, intelligent planning, and focused effort.", author: "Paul J. Meyer" },
-  { quote: "The way to get started is to quit talking and begin doing.", author: "Walt Disney" },
-  { quote: "Do the best you can until you know better. Then when you know better, do better", author: "Maya Angelou" },
-  { quote: "The key to productivity is to rotate your avoidance techniques", author: "Shannon Wheeler" },
-  { quote: "The best way to predict the future is to create it.", author: "Peter Drucker" },
-  { quote: "You may delay, but time will not.", author: "Benjamin Franklin" },
-  { quote: "Focus on being productive instead of busy.", author: "Tim Ferriss" },
-  { quote: "Time is not refundable; use it with intention.", author: "Anon" },
-  { quote: "There is no substitute for hard work.", author: "Thomas Edison" },
-  { quote: "You Got it!!!", author: "" },
-  { quote: "The only way around is through.", author: "Robert Frost" },
-];
-
-let currentQuoteIndex = 0;
-
-function changeQuote() {
-  quoteElement.textContent = `"${productivityQuotes[currentQuoteIndex].quote}" - ${productivityQuotes[currentQuoteIndex].author}`;
-  currentQuoteIndex = Math.floor(Math.random() * 10);
+function getQuote() {
+    fetch('https://api.quotable.io/random')
+        .then(response => response.json())
+        .then(data => {
+            quoteElement.textContent = `"${data.content}" - ${data.author}`;
+        })
+        .catch(error => {
+            console.log(error);
+        });
 }
 
-changeQuote();
+getQuote();
 
-setInterval(changeQuote, 10000);
+setInterval(getQuote, 10000);
 
