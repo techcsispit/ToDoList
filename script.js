@@ -77,7 +77,6 @@ function lightDarkToggle(flag) {
     if(flag==0) {
         if(localStorage.getItem('preference')=='dark') {
             localStorage.setItem('preference', 'light');
-            alert(localStorage.getItem('preference'));
         }
         else {
             localStorage.setItem('preference', 'dark')

@@ -83,3 +83,35 @@ document.querySelector('#next-year').onclick = () => {
     ++curr_year.value
     generateCalendar(curr_month.value, curr_year.value)
 }
+
+//Dark light mode toggle
+let homeIcon = document.querySelector("#home-img");
+let imgSrc= homeIcon.src;
+if(localStorage.getItem('preference')=='dark') {
+    lightDarkToggle(1);
+}
+function lightDarkToggle(flag) {
+    let lightOrDark = document.querySelector(".lightOrDark");
+    let element = document.body;
+    if(flag==0) {
+        if(localStorage.getItem('preference')=='dark') {
+            localStorage.setItem('preference', 'light');
+        }
+        else {
+            localStorage.setItem('preference', 'dark')
+        }
+    }
+    if (homeIcon.src == imgSrc) {
+        homeIcon.src= "public/images/to-do-list-dark.png";
+    }
+    else {
+        homeIcon.src="public/images/to-do-list.png";
+    }
+
+    element.classList.toggle("dark");
+    if (lightOrDark.textContent === "☀︎") {
+        lightOrDark.textContent = "☾";
+      } else {
+        lightOrDark.textContent = "☀︎";
+      }
+}
