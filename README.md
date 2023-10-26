@@ -52,6 +52,24 @@ This is a simple project, but you're welcome to contribute to it by improving th
 
 - Oreniscool for dark mode.
 
+- Oreniscool for fixed purple color not applying on input box.
+
+- Oreniscool for minor bug and UI improvements.
+
+- CODEX108 for made the site responsive.
+
+- Enayut for added a feature that would provide certain inspirational quotes.
+
+- piyushr6 for decreased font items of list items and made the heading a bit smaller.
+
+- Oreniscool for fixed too many tasks breaking the site and many other UI improvements.
+
+- mansidhamne for added calendar feature
+
+- Oreniscool for dark mode enhancements + calendar dark mode.
+
+- CYCLOP5 for added quotes feature
+
 - The 'Poppins' font used in the project is provided by Google Fonts.
 
 Thank you for using and contributing to this Todo List application!
