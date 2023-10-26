@@ -114,3 +114,4 @@ function changeQuote() {
 changeQuote();
 
 setInterval(changeQuote, 10000);
+
