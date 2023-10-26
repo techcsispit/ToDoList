@@ -1,7 +1,6 @@
 const form = document.getElementById('form')
 const input = document.getElementById('input')
 const todosUL = document.getElementById('todos')
-
 const todos = JSON.parse(localStorage.getItem('todos'))
 
 
@@ -66,15 +65,35 @@ function updateLS() {
 }
 
 //Dark light mode toggle
-function lightDarkToggle() {
+let calIcon = document.querySelector("#cal");
+let imgSrc= calIcon.src;
+if(localStorage.getItem('preference')=='dark') {
+    lightDarkToggle(1);
+}
+function lightDarkToggle(flag) {
     let lightOrDark = document.querySelector(".lightOrDark");
     let element = document.body;
     let inputBox = document.querySelector(".input");
+    if(flag==0) {
+        if(localStorage.getItem('preference')=='dark') {
+            localStorage.setItem('preference', 'light');
+        }
+        else {
+            localStorage.setItem('preference', 'dark')
+        }
+    }
+
     try {
         let todos = document.querySelector(".todos li");
         todos.classList.toggle("dark-todos");
     }
     catch(err) {
+    }
+    if (calIcon.src == imgSrc) {
+        calIcon.src= "public/images/calendar-dark.png";
+    }
+    else {
+        calIcon.src="public/images/calendar.png";
     }
     inputBox.classList.toggle("dark-input");
     element.classList.toggle("dark");

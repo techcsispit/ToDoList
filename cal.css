@@ -7,6 +7,7 @@ body {
     height: 100vh;
     margin: 0;
     transition: background 0.2s linear;
+    overflow-y: hidden;
   }
 
 .heading{
@@ -38,6 +39,7 @@ h3{
     --blue: rgb(179, 131, 226);
     --white: #fff;
     --shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    --dark-shadow: rgba(0, 0, 0, 0.616) 0px 7px 29px 0px;
 }
 .light {
     --bg-body: var(--light-body);
@@ -45,6 +47,14 @@ h3{
     --bg-second: var(--light-second);
     --color-hover: var(--light-hover);
     --color-txt: var(--light-text);
+}
+
+.dark {
+    --bg-body: var(--dark-body);
+    --bg-main: var(--dark-main);
+    --bg-second: var(--dark-second);
+    --color-hover: var(--dark-hover);
+    --color-txt: var(--dark-text);
 }
 
 .cal{
@@ -65,6 +75,9 @@ h3{
 
 .light .calendar {
     box-shadow: var(--shadow);
+}
+.dark .calendar {
+    box-shadow: var(--dark-shadow);
 }
 
 .calendar-header {
@@ -286,6 +299,32 @@ pre{
 
 .home{
     position: fixed;
-    top:20px;
-    right: 20px;
+    top:23px;
+    right: 65px;
+    font-size: 25px;
 }
+
+
+/*Dark mode toggle*/
+.lightOrDark {
+    position: fixed;
+    top:20px;
+    transform: rotate(-0.1turn);
+    right: 20px;
+    font-size: 30px;
+    transition: transform 0.2s linear;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+  }
+  
+  .lightOrDark:hover {
+    cursor: pointer;
+  }
+  
+  .dark{
+    background-color: #2d2d2d;
+    color: #e6e6e6;
+  }
+
+  
