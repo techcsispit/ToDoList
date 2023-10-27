@@ -1,4 +1,4 @@
-# **Simple Todo List Application**
+# **Simple [ToDoList](https://techcsispit.github.io/ToDoList/) Application**
 
 This is a simple web-based Todo List application built using HTML, CSS, and JavaScript. It allows users to add, toggle, and delete tasks in a user-friendly interface.
 
@@ -50,7 +50,15 @@ This is a simple project, but you're welcome to contribute to it by improving th
 
 - This project was created as a simple example by a developer (you can include your name or GitHub username here).
 
-- Oreniscool for dark mode.
+- @CODEX108 for the UI redesign and making the site more accessible on mobile devices.
+
+- @Enayut and @CYCLOP5 for the quotes feature.
+
+- @mansidhamne for the calendar feature. 
+
+- @Oreniscool for dark mode, UI improvements and bug fixes.
+
+- @piyushr6 for UI improvements.
 
 - The 'Poppins' font used in the project is provided by Google Fonts.
 
