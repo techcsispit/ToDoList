@@ -111,7 +111,9 @@ function lightDarkToggle(flag) {
     element.classList.toggle("dark");
     if (lightOrDark.textContent === "☀︎") {
         lightOrDark.textContent = "☾";
+        lightOrDark.style.color = "white";
       } else {
         lightOrDark.textContent = "☀︎";
+        lightOrDark.style.color = "#444444";
       }
 }

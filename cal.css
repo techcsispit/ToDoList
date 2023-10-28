@@ -308,6 +308,7 @@ pre{
 /*Dark mode toggle*/
 .lightOrDark {
     position: fixed;
+    color: #444444;
     top:20px;
     transform: rotate(-0.1turn);
     right: 20px;

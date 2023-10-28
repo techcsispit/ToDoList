@@ -6,7 +6,7 @@
 
 body {
   background-color: #f5f5f5;
-  color: #444;
+  color: #151426;
   font-family: 'Poppins', sans-serif;
   display: flex;
   flex-direction: column;
@@ -34,7 +34,6 @@ form {
 }
 
 .quote{
-  color: #a9a9a9;
   font-size: 1rem;
   text-align: center;
   opacity: 0.4;
@@ -64,6 +63,8 @@ form {
 }
 
 .todos {
+  display: flex;
+  flex-direction: column-reverse;
   margin: 0.1rem;
   list-style-type: none;
   transition: background 0.2s linear;
@@ -99,7 +100,6 @@ ul{
 
 
 small {
-  color: #b5b5b5;
   margin-top: 3rem;
   text-align: center;
 }
@@ -119,6 +119,7 @@ small {
 
 /*Dark mode toggle*/
 .lightOrDark {
+  color: #444444;
   position: fixed;
   top:20px;
   transform: rotate(-0.1turn);
