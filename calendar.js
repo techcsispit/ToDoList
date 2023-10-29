@@ -125,7 +125,6 @@ theme(index);
 
 function theme(color) {
     let header = document.querySelector("h3");
-    let currDate = document.querySelector(".calendar-days div.curr-date");
     let themeIcon = document.querySelector(".theme-icon");
     if (color==0) {
         localStorage.setItem('themePreference', 'lavender');
@@ -141,10 +140,15 @@ function theme(color) {
     }
     let preference=localStorage.getItem('themePreference');
 
-      currDate.classList.remove(...themes);
+    try {
+        let currDate = document.querySelector(".calendar-days div.curr-date");
+        currDate.classList.remove(...themes);
+        currDate.classList.add(preference);
+    }
+    catch(err) {}
+      
       themeIcon.classList.remove(...themes);
       header.classList.remove(...themes);
-      currDate.classList.add(preference);
       themeIcon.classList.add(preference);
       header.classList.add(preference);
       
