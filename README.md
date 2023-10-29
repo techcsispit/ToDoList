@@ -56,7 +56,7 @@ This is a simple project, but you're welcome to contribute to it by improving th
 
 - @mansidhamne for the calendar feature. 
 
-- @Oreniscool for dark mode, UI improvements and bug fixes.
+- @Oreniscool for dark mode, themes, UI improvements and bug fixes.
 
 - @piyushr6 for UI improvements.
 

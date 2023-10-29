@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
-
+@import url("themes.css");
 body {
     background-color: #f5f5f5;
-    color: #444;
+    color: #444444;
     font-family: 'Poppins', sans-serif;
     height: 100vh;
     margin: 0;
@@ -18,10 +18,11 @@ body {
 }
 
 h3{
-    color: rgb(179, 131, 226);
+    color: var(--header-text);
     font-size: 25px;
     font-weight: lighter;
     text-decoration: underline;
+    transition: color 0.2s linear;
 }
 
 :root 
@@ -196,9 +197,10 @@ pre{
 
 .calendar-days div.curr-date,
 .calendar-days div.curr-date:hover {
-    background-color: var(--blue);
+    background-color: var(--header-text);
     color: var(--white);
     border-radius: 50%;
+    transition: background 0.2s linear;
 }
 
 .calendar-days div.curr-date span {
@@ -327,5 +329,6 @@ pre{
     background-color: #2d2d2d;
     color: #e6e6e6;
   }
+
 
   

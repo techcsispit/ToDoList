@@ -117,3 +117,35 @@ function lightDarkToggle(flag) {
         lightOrDark.style.color = "#444444";
       }
 }
+
+//Themes logic
+const themes = ["lavender", "orange", "aqua", "lime"];
+let index=themes.findIndex((theme) => theme == localStorage.getItem('themePreference'));
+theme(index);
+
+function theme(color) {
+    let header = document.querySelector("h3");
+    let currDate = document.querySelector(".calendar-days div.curr-date");
+    let themeIcon = document.querySelector(".theme-icon");
+    if (color==0) {
+        localStorage.setItem('themePreference', 'lavender');
+    }
+    if (color==1) {
+        localStorage.setItem('themePreference', 'orange');
+    }
+    if (color==2) {
+        localStorage.setItem('themePreference', 'aqua');
+    }
+    if (color==3) {
+        localStorage.setItem('themePreference', 'lime');
+    }
+    let preference=localStorage.getItem('themePreference');
+
+      currDate.classList.remove(...themes);
+      themeIcon.classList.remove(...themes);
+      header.classList.remove(...themes);
+      currDate.classList.add(preference);
+      themeIcon.classList.add(preference);
+      header.classList.add(preference);
+      
+}

@@ -7,6 +7,17 @@
     <link rel="stylesheet" href="cal.css">
 </head>
 <body>
+    <div class="lavender">
+        <div class="theme">
+          <span class="theme-icon"></span>
+          <div class="theme-selector">
+            <span class="lavender-theme" onclick="theme(0)"></span>
+            <span class="orange-theme" onclick="theme(1)"></span>
+            <span class="aqua-theme" onclick="theme(2)"></span>
+            <span class="lime-theme" onclick="theme(3)"></span>
+          </div>
+        </div>
+      </div>
     <div class="home"><a href="index.html"><img id="home-img" src="public/images/to-do-list.png" alt=""></a></div>
     <div class="lightOrDark" onclick="lightDarkToggle(0)">☀︎</div>
     <div class="heading">
@@ -38,7 +49,7 @@
                     <div>Fri</div>
                     <div>Sat</div>
                 </div>
-                <div class="calendar-days"></div>
+                <div class="calendar-days lavender"></div>
             </div>
            
             <div class="month-list"></div>

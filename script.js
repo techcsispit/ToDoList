@@ -64,6 +64,45 @@ function updateLS() {
     localStorage.setItem('todos', JSON.stringify(todos))
 }
 
+//Themes logic
+const themes = ["lavender", "orange", "aqua", "lime"];
+let index=themes.findIndex((theme) => theme == localStorage.getItem('themePreference'));
+theme(index);
+
+function theme(color) {
+    let header = document.querySelector("h3");
+    let inputBox = document.querySelector(".input");
+    let themeIcon = document.querySelector(".theme-icon");
+    if (color==0) {
+        localStorage.setItem('themePreference', 'lavender');
+    }
+    if (color==1) {
+        localStorage.setItem('themePreference', 'orange');
+    }
+    if (color==2) {
+        localStorage.setItem('themePreference', 'aqua');
+    }
+    if (color==3) {
+        localStorage.setItem('themePreference', 'lime');
+    }
+    let preference=localStorage.getItem('themePreference');
+      try {
+         let todos = document.querySelector(".todos");
+         todos.classList.remove(...themes);
+         todos.classList.add(preference);
+       }
+       catch(err) {
+      }
+      themeIcon.classList.remove(...themes);
+      header.classList.remove(...themes);
+      inputBox.classList.remove(...themes);
+      themeIcon.classList.add(preference);
+      header.classList.add(preference);
+      inputBox.classList.add(preference);
+}
+
+
+
 //Dark light mode toggle
 let calIcon = document.querySelector("#cal");
 let imgSrc= calIcon.src;
