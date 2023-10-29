@@ -7,17 +7,31 @@
     <title>Todo List</title>
   </head>
   <body>
+    <div class="lavender">
+      <div class="theme">
+        <span class="theme-icon"></span>
+        <div class="theme-selector">
+          <span class="lavender-theme" onclick="theme(0)"></span>
+          <span class="orange-theme" onclick="theme(1)"></span>
+          <span class="aqua-theme" onclick="theme(2)"></span>
+          <span class="lime-theme" onclick="theme(3)"></span>
+        </div>
+      </div>
+    </div>
     <div class="calendar" onclick="calendar()"><a href="cal.html"><img id="cal" src="public/images/calendar.png" alt=""></a></div>
     <div class="lightOrDark" onclick="lightDarkToggle(0)">☀︎</div>
-    <h3>todos</h3>
+
+    <div class="lavender"><h3>todos</h3></div>
     <div class="quotes-container" id="quotes-container">
       <p class="quote" id="quote">
       </p>
     </div>  
+    <div class="lavender">
     <form id="form">
       <input type="text" class="input" id="input" placeholder="Enter your todo" autocomplete="off">
         <ul class="todos" id="todos"></ul>
     </form>
+    </div>
     <small>Left click to toggle completed. <br> Right click to delete todo</small>
 
     <script src="script.js"></script>

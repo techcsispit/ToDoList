@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
+@import url("themes.css");
 
 * {
   box-sizing: border-box;
@@ -6,7 +7,7 @@
 
 body {
   background-color: #f5f5f5;
-  color: #444;
+  color: #151426;
   font-family: 'Poppins', sans-serif;
   display: flex;
   flex-direction: column;
@@ -18,11 +19,12 @@ body {
 }
 
 h3 {
-  color: rgb(179, 131, 226);
+  color: var(--header-text);
   font-size: 5rem;
   text-align: center;
   opacity: 0.6;
   margin-bottom:1rem;
+  transition: color 0.2s linear;
 }
 
 form {
@@ -34,7 +36,6 @@ form {
 }
 
 .quote{
-  color: #a9a9a9;
   font-size: 1rem;
   text-align: center;
   opacity: 0.4;
@@ -43,7 +44,7 @@ form {
 
 .input {
   border: none;
-  color: #444;
+  color: #444444;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   border-radius:15px;
   font-size: 2rem;
@@ -60,10 +61,12 @@ form {
 
 .input:focus {
   outline-style: solid;
-  outline-color: rgb(179, 131, 226);
+  outline-color: var(--header-text);
 }
 
 .todos {
+  display: flex;
+  flex-direction: column-reverse;
   margin: 0.1rem;
   list-style-type: none;
   transition: background 0.2s linear;
@@ -88,7 +91,7 @@ ul{
   width:100%;
 }
 .todos li:hover {
-  background-color: rgba(178, 131, 226, 0.406);
+  background-color: var(--hover-color);
 }
 
 .todos li.completed {
@@ -99,7 +102,6 @@ ul{
 
 
 small {
-  color: #b5b5b5;
   margin-top: 3rem;
   text-align: center;
 }
@@ -119,6 +121,7 @@ small {
 
 /*Dark mode toggle*/
 .lightOrDark {
+  color: #444444;
   position: fixed;
   top:20px;
   transform: rotate(-0.1turn);
