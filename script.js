@@ -1,7 +1,26 @@
+const now = new Date();
+const hours = now.getHours();
+const greeting= document.querySelector('.greeting');
 const form = document.getElementById('form')
 const input = document.getElementById('input')
 const todosUL = document.getElementById('todos')
 const todos = JSON.parse(localStorage.getItem('todos'))
+
+if(hours=>6 && hours<12) {
+    greeting.textContent= "Good morning";
+}
+if(hours=>12 && hours<17) {
+    greeting.textContent= "Good afternoon";
+}
+if(hours=>17 && hours<21) {
+    greeting.textContent= "Good evening"
+}
+if(hours=>21 && hours<24) {
+    greeting.textContent= "Good night";
+}
+if(hours=>0 && hours<6)  {
+    greeting.textContent= "Sleep well";
+}
 
 
 if(todos) {
@@ -152,7 +171,12 @@ function getQuote() {
     fetch('https://api.quotable.io/random')
         .then(response => response.json())
         .then(data => {
+            if (data.content.length>100) {
+                getQuote();
+            }
+            else {
             quoteElement.textContent = `"${data.content}" - ${data.author}`;
+            }
         })
         .catch(error => {
             console.log(error);
@@ -161,5 +185,5 @@ function getQuote() {
 
 getQuote();
 
-setInterval(getQuote, 10000);
+setInterval(getQuote, 3600000);
 

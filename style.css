@@ -151,6 +151,11 @@ small {
   color: #e6e6e6;
 }
 
+.greeting {
+  color: #707070;
+  font-style: italic;
+  font: 1rem;
+}
 
 @media only screen and (max-width: 600px) {
   h1 {
